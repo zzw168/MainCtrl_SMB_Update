@@ -93,7 +93,7 @@ def load_config():
 def update_button():
     save_main_json()
     update_file()
-    # start_program()
+    start_program()
 
 
 def start_program():
@@ -117,7 +117,7 @@ def update_file():
 
 def save_main_json():
     global main_all
-    file = "main_config.json"
+    file = "update_config.json"
     if os.path.exists(file):
         main_all['remote_host'] = ui.lineEdit_remote_host.text()
         main_all['share_name'] = ui.lineEdit_share_name.text()
@@ -135,7 +135,7 @@ def save_main_json():
 
 def load_main_json():
     global main_all
-    file = "main_config.json"
+    file = "update_config.json"
     if os.path.exists(file):
         f = open(file, 'r', encoding='utf-8')
         main_all = json.load(f)
@@ -155,9 +155,6 @@ class ZUi(QMainWindow, Ui_MainWindow):
 
     def setupUi(self, z_window):
         super().setupUi(z_window)
-        tb_camera = self.tableWidget_camera
-        tb_camera.horizontalHeader().setStyleSheet("QHeaderView::section{background:rgb(245,245,245);}")
-        tb_camera.verticalHeader().setStyleSheet("QHeaderView::section{background:rgb(245,245,245);}")
 
 
 class ZMainwindow(QMainWindow):
@@ -233,9 +230,6 @@ if __name__ == '__main__':
     load_main_json()
     load_config()
 
-    ui.tableWidget_camera.itemChanged.connect(table_change)
-    ui.pushButton_camera_save.clicked.connect(save_config)
     ui.pushButton_update.clicked.connect(update_button)
-    ui.pushButton_start.clicked.connect(start_program)
 
     sys.exit(app.exec())
