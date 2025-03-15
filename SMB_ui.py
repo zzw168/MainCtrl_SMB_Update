@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'SMB_ui.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.8.0
+## Created by: Qt User Interface Compiler version 6.8.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -15,60 +15,26 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QAbstractItemView, QApplication, QFrame, QGridLayout,
-    QGroupBox, QHeaderView, QLabel, QLineEdit,
-    QMainWindow, QMenuBar, QPushButton, QSizePolicy,
-    QStatusBar, QTableWidget, QTableWidgetItem, QTextBrowser,
-    QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QGroupBox,
+    QLabel, QLineEdit, QMainWindow, QPushButton,
+    QSizePolicy, QStatusBar, QTextBrowser, QWidget)
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(682, 496)
+        MainWindow.resize(300, 450)
+        MainWindow.setMinimumSize(QSize(300, 450))
+        MainWindow.setMaximumSize(QSize(300, 450))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
+        self.centralwidget.setMaximumSize(QSize(680, 16777215))
         self.gridLayout = QGridLayout(self.centralwidget)
         self.gridLayout.setObjectName(u"gridLayout")
-        self.frame = QFrame(self.centralwidget)
-        self.frame.setObjectName(u"frame")
-        self.frame.setFrameShape(QFrame.Shape.StyledPanel)
-        self.frame.setFrameShadow(QFrame.Shadow.Raised)
-        self.gridLayout_5 = QGridLayout(self.frame)
-        self.gridLayout_5.setObjectName(u"gridLayout_5")
-        self.tableWidget_camera = QTableWidget(self.frame)
-        if (self.tableWidget_camera.columnCount() < 3):
-            self.tableWidget_camera.setColumnCount(3)
-        __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget_camera.setHorizontalHeaderItem(0, __qtablewidgetitem)
-        __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget_camera.setHorizontalHeaderItem(1, __qtablewidgetitem1)
-        __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget_camera.setHorizontalHeaderItem(2, __qtablewidgetitem2)
-        self.tableWidget_camera.setObjectName(u"tableWidget_camera")
-        font = QFont()
-        font.setFamilies([u"Microsoft YaHei"])
-        font.setPointSize(10)
-        font.setBold(True)
-        self.tableWidget_camera.setFont(font)
-        self.tableWidget_camera.setSelectionBehavior(QAbstractItemView.SelectionBehavior.SelectRows)
-        self.tableWidget_camera.horizontalHeader().setStretchLastSection(True)
-
-        self.gridLayout_5.addWidget(self.tableWidget_camera, 0, 0, 1, 1)
-
-        self.pushButton_camera_save = QPushButton(self.frame)
-        self.pushButton_camera_save.setObjectName(u"pushButton_camera_save")
-        self.pushButton_camera_save.setFont(font)
-
-        self.gridLayout_5.addWidget(self.pushButton_camera_save, 1, 0, 1, 1)
-
-
-        self.gridLayout.addWidget(self.frame, 0, 0, 1, 1)
-
         self.frame_2 = QFrame(self.centralwidget)
         self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setMinimumSize(QSize(300, 0))
-        self.frame_2.setMaximumSize(QSize(300, 16777215))
+        self.frame_2.setMinimumSize(QSize(200, 0))
+        self.frame_2.setMaximumSize(QSize(280, 16777215))
         self.frame_2.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_2 = QGridLayout(self.frame_2)
@@ -76,14 +42,25 @@ class Ui_MainWindow(object):
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
         self.frame_3 = QFrame(self.frame_2)
         self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setMaximumSize(QSize(278, 435))
         self.frame_3.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_4 = QGridLayout(self.frame_3)
         self.gridLayout_4.setObjectName(u"gridLayout_4")
+        self.textBrowser = QTextBrowser(self.frame_3)
+        self.textBrowser.setObjectName(u"textBrowser")
+        self.textBrowser.setReadOnly(False)
+
+        self.gridLayout_4.addWidget(self.textBrowser, 1, 0, 1, 1)
+
         self.groupBox = QGroupBox(self.frame_3)
         self.groupBox.setObjectName(u"groupBox")
         self.groupBox.setMinimumSize(QSize(0, 260))
         self.groupBox.setMaximumSize(QSize(16777215, 260))
+        font = QFont()
+        font.setFamilies([u"Microsoft YaHei"])
+        font.setPointSize(10)
+        font.setBold(True)
         self.groupBox.setFont(font)
         self.gridLayout_3 = QGridLayout(self.groupBox)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
@@ -155,29 +132,13 @@ class Ui_MainWindow(object):
 
         self.gridLayout_4.addWidget(self.groupBox, 0, 0, 1, 1)
 
-        self.textBrowser = QTextBrowser(self.frame_3)
-        self.textBrowser.setObjectName(u"textBrowser")
-        self.textBrowser.setReadOnly(False)
-
-        self.gridLayout_4.addWidget(self.textBrowser, 2, 0, 1, 1)
-
-        self.pushButton_start = QPushButton(self.frame_3)
-        self.pushButton_start.setObjectName(u"pushButton_start")
-        self.pushButton_start.setFont(font)
-
-        self.gridLayout_4.addWidget(self.pushButton_start, 1, 0, 1, 1)
-
 
         self.gridLayout_2.addWidget(self.frame_3, 0, 0, 1, 1)
 
 
-        self.gridLayout.addWidget(self.frame_2, 0, 1, 1, 1)
+        self.gridLayout.addWidget(self.frame_2, 0, 0, 1, 1)
 
         MainWindow.setCentralWidget(self.centralwidget)
-        self.menubar = QMenuBar(MainWindow)
-        self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 682, 20))
-        MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
         MainWindow.setStatusBar(self.statusbar)
@@ -188,14 +149,7 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u56fe\u50cf\u8bc6\u522b\u7ba1\u7406\u5668", None))
-        ___qtablewidgetitem = self.tableWidget_camera.horizontalHeaderItem(0)
-        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"\u5730\u56fe\u7f16\u53f7", None));
-        ___qtablewidgetitem1 = self.tableWidget_camera.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"\u955c\u5934\u7f16\u53f7", None));
-        ___qtablewidgetitem2 = self.tableWidget_camera.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"\u65cb\u8f6c(1,0,-1,-2)", None));
-        self.pushButton_camera_save.setText(QCoreApplication.translate("MainWindow", u"\u4fdd\u5b58", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"\u4e2d\u63a7\u5347\u7ea7\u5668", None))
         self.groupBox.setTitle(QCoreApplication.translate("MainWindow", u"\u5347\u7ea7\u8bbe\u7f6e", None))
         self.lineEdit_share_name.setText("")
         self.lineEdit_remote_path.setText("")
@@ -209,6 +163,5 @@ class Ui_MainWindow(object):
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u672c\u5730\u6587\u4ef6\u8def\u5f84\uff1a", None))
         self.lineEdit_local_path.setText("")
         self.pushButton_update.setText(QCoreApplication.translate("MainWindow", u"\u5347\u7ea7\u5e76\u542f\u52a8", None))
-        self.pushButton_start.setText(QCoreApplication.translate("MainWindow", u"\u76f4\u63a5\u542f\u52a8", None))
     # retranslateUi
 
